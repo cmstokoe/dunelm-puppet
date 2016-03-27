@@ -1,0 +1,20 @@
+
+base::packages:
+  - apt-file
+  - bash
+  - bc
+  - ca-certificates
+  - htop
+  - iotop
+  - libnet-snmp-perl
+  - libsnmp-perl
+  - nload
+  - screen
+  - sockstat
+  - software-properties-common
+  - zsh
+
+base::purged:
+  - collectd
+  - collectd-core
+  - lxc-docker

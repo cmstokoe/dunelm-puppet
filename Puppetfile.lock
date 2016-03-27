@@ -1,0 +1,21 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    attachmentgenie-ufw (1.4.9)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-concat (1.2.5)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-mcollective (99.99.99)
+      puppetlabs-concat (~> 1.0)
+      puppetlabs-stdlib (>= 3.2.0)
+      richardc-datacat (~> 0.5.0)
+    puppetlabs-ntp (4.1.2)
+      puppetlabs-stdlib (< 5.0.0, >= 4.6.0)
+    puppetlabs-stdlib (4.11.0)
+    richardc-datacat (0.5.0)
+
+DEPENDENCIES
+  attachmentgenie-ufw (>= 0)
+  puppetlabs-mcollective (>= 0)
+  puppetlabs-ntp (>= 0)
+

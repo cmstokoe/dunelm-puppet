@@ -1,0 +1,12 @@
+---
+:backends:
+  - yaml
+:hierarchy:
+  - hosts/%{::fqdn}
+  - environments/%{::environment}
+  - locations/%{::location}
+  - os/%{::osfamily}/%{::version}
+  - os/%{::osfamily}
+  - global
+:yaml:
+  :datadir: /etc/puppet/data
