@@ -1,3 +1,4 @@
 .tmp/
+keys/
 modules/*
 !modules/dunelm-*

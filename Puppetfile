@@ -12,6 +12,8 @@ forge "https://forgeapi.puppetlabs.com"
 # A module from the Puppet Forge
 mod 'puppetlabs-ntp'
 mod 'puppetlabs-mcollective'
+mod 'puppetlabs-vcsrepo'
+mod 'deric-accounts'
 mod 'attachmentgenie-ufw'
 
 # A module from git

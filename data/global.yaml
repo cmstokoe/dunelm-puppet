@@ -1,6 +1,0 @@
----
-
-classes:
-  - ntp
-
-ntp::service_ensure: running

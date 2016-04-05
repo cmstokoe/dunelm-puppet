@@ -1,12 +1,18 @@
 ---
 :backends:
+  - eyaml
   - yaml
 :hierarchy:
-  - hosts/%{::fqdn}
+  - nodes/%{::fqdn}
+  - environments/%{::environment}/%{::location}
   - environments/%{::environment}
-  - locations/%{::location}
   - os/%{::osfamily}/%{::version}
   - os/%{::osfamily}
+  - users
   - global
 :yaml:
   :datadir: /etc/puppet/data
+:eyaml:
+  :datadir: /etc/puppet/data
+  :pkcs7_private_key: /etc/puppet/keys/eyaml/private_key.pkcs7.pem
+  :pkcs7_public_key:  /etc/puppet/keys/eyaml/public_key.pkcs7.pem
