@@ -5,11 +5,11 @@ accounts:user_defaults:
 accounts::users:
   root:
     uid: 0
-    groups: ['root']
     pwhash: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAYYU7SVW6oDU6VWe4TqpUYupd+V9qVL9uO+mj1g0XxRb1YNqC/+Zh1Dtj4V7L5kP2mMo4f7qNKjFC2kQPh4LgPNsoMjzYv7Bw9LgE8CRGvl01nPxfJCrUcaSd5KDShn6Ni7FB8pFets/bfag/SaceuV1vQ80NPWYt7R6zYwWbCbka8bUkjCr6gwcf41eKBb4fcS1QvgwHI+jyqb33rQlyJ3PtLPFf1Nv6TH8DC5s525uIAMisP7ccU4G9CMCg/zJXi5GzpJvJqWDcsBYI9HXn2o3Kfwq6NtgFPO1AEpy72yWXB0jpstImmzLal/mYiFmKvOa6IP6BrJCwXNYqQVX+YTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBC3D5ZwksOsuzUB9/E8AwH+gBCTifZncGC5/fvCRKt9DLHk] 
     home: '/root'
   localuser:
-    uid: 101
+    ensure: absent
+    uid: 999
     groups: ['users']
     pwhash: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAGKW6DVjnCNp2xfBjrzrbIFHpkjhzUInGDK+dtr9MOw+qaO+FBSBZyCpyktOnn3FQex4nF01heKJLRDx3VWyZML7vqoequtv16tz7sF2vnKo1Zj8nC+yIoMxRj14TC8Zv02SWn57Y5P4jWCPkGJiBLBII5Fm6WyW8nJaPhQt+W3Kf18tmus2r5jRiZB47Vq3W1TrHa4BVyI6/luzdokJ2ersEjxZnRhXVdFGGjUgTcfnbp0nja3Fht1Sjt+zF9LZUSEKgmy+dB4eHQ2d4Y7DJBcNyiOhsOwhtGDUnLzzUlDKbQasK9lCdHfxm4PZYXOi/qOlDudiiMFq8hnkctGufpTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBDwS0rdHIcaukSuJPni9MovgBCIY8/q5IxhM+FoNacvdwCy]
   ubuntu:

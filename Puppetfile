@@ -13,8 +13,10 @@ forge "https://forgeapi.puppetlabs.com"
 mod 'puppetlabs-ntp'
 mod 'puppetlabs-mcollective'
 mod 'puppetlabs-vcsrepo'
+mod 'puppetlabs-stdlib'
 mod 'deric-accounts'
-mod 'attachmentgenie-ufw'
+mod 'attachmentgenie-ufw',
+   :git => 'https://github.com/attachmentgenie/attachmentgenie-ufw.git'
 
 # A module from git
 # mod 'puppetlabs-ntp',

@@ -1,8 +1,8 @@
 ---
 classes:
-#  - base::packages
-#  - base::firewall 
-#  - accounts
+  - base::packages 
+  - base::firewall 
+  - accounts
   - ntp
 
 ntp::service_ensure: running
@@ -10,5 +10,16 @@ ntp::servers:
   - 0.freebsd.pool.ntp.org
   - 1.freebsd.pool.ntp.org
   - 2.freebsd.pool.ntp.org
+
+base::packages::install:
+  - htop
+  - curl
+  - nmap 
+
+base::firewall::allow:
+   ssh:
+      port: 22
+#   www:
+#      port: 80
 
 test: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAjaeb7xmvqro+CICfXWf+k1Iz5X3YgUEfHhm0V6TDPe1WqLCStrhAn7ykNSDujt+arVB0yBaGiUeJzq0fEVCmCjXSrY5RRh1rMc7PFF2PzUmnqS8TeQnJyT1A5ikp0UY9B69OP9/6Em6Ygo2kyWc8Jr4DZDb4AcdxRob14vOssEksbdQp8hVj8t0iKv8efr+HMXFoGaCu3bmOy+PDcnrCmNRBoq4KznYic8O6LaGpjf2URHlJQfWMEgabhAR3EF7tT3XZ2Y8gY0DG24sFPQYmSioybzXfP4xFeKe29xfiOlkk18mAGtywHf9PA/rmPNElBRXqbGZYc0h+lMR0V4n14jA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBFEGw3JgkD0chfFgmACgt2gBBPHKvpxTntrQ8cmJ8zmb9b]
