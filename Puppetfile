@@ -14,6 +14,7 @@ mod 'puppetlabs-ntp'
 mod 'puppetlabs-mcollective'
 mod 'puppetlabs-vcsrepo'
 mod 'puppetlabs-stdlib'
+mod 'ghoneycutt-hosts'
 mod 'deric-accounts'
 mod 'attachmentgenie-ufw',
    :git => 'https://github.com/attachmentgenie/attachmentgenie-ufw.git'
