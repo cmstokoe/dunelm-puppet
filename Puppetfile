@@ -18,6 +18,8 @@ mod 'ghoneycutt-hosts'
 mod 'deric-accounts'
 mod 'attachmentgenie-ufw',
    :git => 'https://github.com/attachmentgenie/attachmentgenie-ufw.git'
+mod 'saz-timezone'
+
 
 # A module from git
 # mod 'puppetlabs-ntp',
