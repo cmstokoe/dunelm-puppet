@@ -1,0 +1,10 @@
+---
+
+classes:
+  - plex
+
+base::firewall::allow:
+   ssh:
+      port: 22
+   plex:
+      port: 32400
