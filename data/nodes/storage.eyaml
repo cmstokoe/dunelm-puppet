@@ -1,0 +1,6 @@
+---
+base::firewall::allow:
+   ssh:
+      port: 22
+   samba:
+      port: samba
