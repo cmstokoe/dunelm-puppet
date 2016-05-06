@@ -33,7 +33,7 @@ define base::firewall::allow($proto='tcp', $port='all', $ip='', $from='any') {
 
   $command = $port ? {
     'all'   	=> "ufw allow proto ${proto} from ${from} to ${ipadr}",
-    /[a-zA-Z]/  => "ufw allow from ${from} to ${ipadr} app ${port}",
+    /[a-zA-Z]/  => "ufw allow ${port}",
     default 	=> "ufw allow proto ${proto} from ${from} to ${ipadr} port ${port}",
   }
 

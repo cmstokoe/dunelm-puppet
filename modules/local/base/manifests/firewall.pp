@@ -5,14 +5,15 @@
 #  Be careful calling this class alone, it will by default enable ufw
 # and disable all incoming traffic.
 class base::firewall (
-  $allow   = {},
-  $deny    = {},
   $forward = 'DROP',
-  $limit   = {},
-  $logging = {},
-  $reject  = {},
 ) {
 
+  $allow   = hiera_hash('base::firewall::allow', {})
+  $deny    = hiera_hash('base::firewall::deny', {})
+  $limit   = hiera_hash('base::firewall::limit', {})
+  $logging = hiera_hash('base::firewall::logging', {})
+  $reject  = hiera_hash('base::firewall::reject', {})
+  
   validate_re($forward, 'ACCEPT|DROP|REJECT')
 
   Exec {
@@ -63,7 +64,6 @@ class base::firewall (
     status    => 'ufw status | grep -q "Status: active"',
     subscribe => Package['ufw'],
   }
-
   # Hiera resource creation
   create_resources('::base::firewall::allow',  $allow)
   create_resources('::base::firewall::deny', $deny)
