@@ -1,7 +1,9 @@
 ---
 classes:
+  - base::sudoers
   - base::packages 
-  - base::firewall 
+  - base::crontabs 
+  - base::firewall
   - accounts
   - ntp
 
@@ -21,3 +23,8 @@ base::firewall::allow:
       port: 22
    mdns:
       port: mdns
+
+base::crontabs:
+  'Apt-Update':
+    command: '/usr/bin/apt-get update'
+    hour:    '2'
