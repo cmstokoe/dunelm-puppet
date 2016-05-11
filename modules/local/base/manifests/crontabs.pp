@@ -1,19 +1,12 @@
-class base::crontabs (
-  $config   = undef,
-  $sys_schedule = 'always',
-) {
+class base::crontabs {
   $defaults = {
     ensure   => 'present',
     schedule => $sys_schedule,
     user     => 'root',
+    minute   => fqdn_rand(60),
   }
-  if $config {
-    create_resources(cron, $config, $defaults)
-  }
-  else {
     $hiera_config = hiera_hash('base::crontabs', undef)
     if $hiera_config {
       create_resources(cron, $hiera_config, $defaults)
     }
-  }
 }
