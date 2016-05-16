@@ -17,6 +17,7 @@ base::packages::install:
   - htop
   - curl
   - nmap 
+  - avahi-daemon
 
 base::firewall::allow:
    ssh:
