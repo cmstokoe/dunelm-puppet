@@ -5,6 +5,8 @@ FORGE
       deric-gpasswd (>= 0.2.2)
       puppetlabs-stdlib (>= 4.2.0)
     deric-gpasswd (0.2.3)
+    ghoneycutt-hosts (2.2.3)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
     puppetlabs-concat (1.2.5)
       puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
     puppetlabs-mcollective (99.99.99)
@@ -16,6 +18,9 @@ FORGE
     puppetlabs-stdlib (4.11.0)
     puppetlabs-vcsrepo (1.3.2)
     richardc-datacat (0.5.0)
+    saz-timezone (3.3.0)
+      puppetlabs-stdlib (>= 2.3.0)
+    thias-samba (1.0.0)
 
 GIT
   remote: https://github.com/attachmentgenie/attachmentgenie-ufw.git
@@ -28,8 +33,11 @@ GIT
 DEPENDENCIES
   attachmentgenie-ufw (>= 0)
   deric-accounts (>= 0)
+  ghoneycutt-hosts (>= 0)
   puppetlabs-mcollective (>= 0)
   puppetlabs-ntp (>= 0)
   puppetlabs-stdlib (>= 0)
   puppetlabs-vcsrepo (>= 0)
+  saz-timezone (>= 0)
+  thias-samba (>= 0)
 
