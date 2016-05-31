@@ -4,8 +4,5 @@ class base::packages() {
 	$purge = hiera_array('base::packages::purge', [])
 
 	ensure_resource('package', $install, {ensure =>  installed})
-
-	packages { $purge:
-		ensure	=> purged,
-  	}	
+        ensure_resource('package', $purge, {ensure => absent})
 }
