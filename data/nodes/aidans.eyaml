@@ -1,0 +1,14 @@
+---
+base::packages::install:
+  - mosh
+  - curl
+
+base::firewall::allow:
+   mosh: 
+      port: 60000:61000
+      proto: udp
+
+base::crontabs:
+  'ENom_DNS_gateway':
+    command: ENC[PKCS7,MIICGwYJKoZIhvcNAQcDoIICDDCCAggCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAAll94PsECklMmGnHfCBPU3AEle8IZ4P+Ke0Hpa/2CHD6NrnR7daB7ZEIjJ9EFbOX9zuApEg+wxCvRl3X2BK+LJe3FjrJ9TkT2Pz+Vyv1Mkxzr+41bh3rr4e5zUAwm7QSv+AR7IMejleKsFFrzyidZ0M4ycUTerax4u6Vgmf9GokEVICZtSakuQUxl9Y3TPEuaefN/FVYUVbwPKIiCQLpo6Q2ioKiiBHY12HIPT4AvIx4GZBU2ohNSt3NnyD/gnselwV8RyCOvVHUPlA5duDr3z0zGHvRnJlKL/Wbff1kDN23CcOODtX1NH1+Iau+gAYJkrzbrv2BrhaXecYkrOWSCDCB3QYJKoZIhvcNAQcBMB0GCWCGSAFlAwQBKgQQ00BQOn8lifcVM+BMVTWU74CBsMhB0qqqtdn6E0KlcldLW71Y+MTFkaXW7ccElgImoFgi+trPQBSXSIxJ0238lKnHdIYuCbe8LLIVoEByv/nkUJ6dyxUAs84t7T+PfRrWaHKygoxI1Ro7VTyShnl7jyI8DL5VyJg1qwKePV3AHnBFhISuQpL/xJcASfMsbQyuYfb7iAnYXe74W9uie0Cr8nVlCw/1v4mdm6L1fAnY4JnF0jPhSEV6J4bpVKiSPJO1jp0V]
+    minute: '*/10'
